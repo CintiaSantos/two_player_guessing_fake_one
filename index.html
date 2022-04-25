@@ -35,7 +35,7 @@
               <p class="current-range">The Current Range is <span class="range-start">1</span> to <span class="range-end">100</span></p>
               <div class="challenger1">
                 <form>
-                  <h4 class="bold">Challenger 1</h4>
+                  <h4 class="bold">Player One</h4>
                   <div class="chall1-name">
                     <label class="">Name
                       <input type="text" name="" class="name1" id="name-input1">
@@ -44,5 +44,58 @@
                       <span id="name1" class="invisible">Please enter a name.</span>
                     </section>
                   </div>
+                  <div class="chall1-guess">
+                    <label class="">Guess
+                      <input type="number" class="guess1" id="guess-input1"></input>
+                    </label>
+                    <section class="guess1-spans">
+                     <span id="guess1" class="invisible">Please enter a guess.</span>
+                     <span id="guess1-not-valid" class="invisible">Not valid.</span>
+                    </section>
+                  </div>
+                  <h4 class="extra-margin bold">Player Two</h4>
+                  <div class="chall2-name">
+                    <label class="">Name
+                      <input type="text" name="" class="name2" id="name-input2">
+                    </label>
+                    <article>
+                      <span id="name2" class="invisible">Please enter a name.</span>
+                    </article>
+                  </div>
+                  <div class="chall2-guess">
+                    <label class="">Guess
+                      <input type="number" class="guess2" id="guess-input2"></input>
+                    </label>
+                    <section class="guess2-spans">
+                     <span id="guess2" class="invisible">Please enter a guess.</span>
+                     <span id="guess2-not-valid" class="invisible">Not valid.</span>
+                    </section>
+                  </div>
+                  <section class="button-group">
+                    <button class="submit-guess" type="submit">SUBMIT GUESS</button>
+                    <button class="reset-game" type="reset" value="Refresh Page" onClick="window.location.reload()" disabled>RESET GAME</button>
+                    <button class="clear-game" type="reset" disabled>CLEAR GAME</button>
+                  </section>
+                </form>
+              </div>
+            </article>
+            <article class="left-cards score">
+                <h4 class="bold">Latest Score</h4>
+                <section class="align-scores">
+                  <div class="chall1-score">
+                    <h5 class="score-name1">Challenger 1 Name</h5>
+                    <p>current guess</p>
+                    <h1 class="guess-result1">0</h1>
+                  </div>
+                  <div class="chall2-score">
+                    <h5 class="score-name2">Challenger 2 Name</h5>
+                    <p>current guess</p>
+                    <h1  class="guess-result2">0</h1>
+                  </div>
+                </section>
+              </article>
+            </section>
+         </div>
+ <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
