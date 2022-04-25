@@ -9,9 +9,9 @@ header {
     width: 100%;
     height: 170px;
     margin: 0;
-    background: #404041;
+    background: #55e0dc;
   }  
-  
+
   body {
     height: 100%;
     /*background-image: url(media/background-placeholder.jpg);*/
@@ -22,3 +22,50 @@ header {
     color: #6E6E6E;
   }
 
+  /*COLUMNS*/
+.column-container {
+    display: flex;
+  }
+  
+  .column {
+    width: 50%;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background: #D0D2D3;
+  }
+
+  /*LEFT COLUMN*/
+.left-column {
+    background: #F7F7F7;
+    border-right: #6e6e6e solid 3px;
+  }
+  
+  .left-cards {
+    box-sizing: border-box;
+    width: 100%;
+    border: #efefef solid 2px;
+    margin-top: 15px;
+    padding: 20px;
+    padding-top: 15px;
+    background: white;
+  }
+
+  /*RIGHT COLUMN*/
+.right-column {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .score-card {
+    width: 95%;
+    border: solid 2px grey;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+  }
+  

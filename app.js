@@ -10,6 +10,15 @@ let guess2 = document.querySelector('.guess2');
 let submitButton = document.querySelector('.submit-guess');
 let randomNumber = randomNumberGenerator(1, 100);
 let allInputFields = document.querySelectorAll('input');
+let scoreName1 = document.querySelector('.score-name1');
+let scoreName2 = document.querySelector('.score-name2');
+let guessResult1 = document.querySelector('.guess-result1');
+let guessResult2 = document.querySelector('.guess-result2');
+let guessMessage1 = document.querySelector('.guess-message1');
+let guessMessage2 = document.querySelector('.guess-message2');
+let chall1Scorecard = document.querySelector('.chall1-scorecard');
+let chall2Scorecard = document.querySelector('.chall2-scorecard');
+let cardWinner = document.querySelector('.card-winner');
 
 console.log(randomNumber);
 
@@ -129,4 +138,38 @@ function clearDisable(event) {
     enableResetButton.disabled = false;
     enableClearButton.disabled = false;
 	}
+}
+
+function playerOneWins(){
+	if (parseInt(guessResult1.innerText) < randomNumber){
+		guessMessage1.innerText = "That's too low!";
+	} else if (parseInt(guessResult1.innerText) > randomNumber){
+		guessMessage1.innerText = "That's too high!";
+	} else {
+		guessMessage1.innerText = "BOOM!";
+		scorecardOne();
+	}
+}
+
+function playerTwoWins(){
+	if (parseInt(guessResult2.innerText) < randomNumber){
+		guessMessage2.innerText = "That's too low!";
+	} else if (parseInt(guessResult2.innerText) > randomNumber){
+		guessMessage2.innerText = "That's too high!";
+	} else {
+		guessMessage2.innerText = "BOOM!";
+		scorecardTwo();
+	}
+}
+
+function scorecardOne(){
+	chall1Scorecard.innerText = name1.value;
+	chall2Scorecard.innerText = name2.value;
+	cardWinner.innerText = name1.value;
+}
+
+function scorecardTwo(){
+	chall1Scorecard.innerText = name1.value;
+	chall2Scorecard.innerText = name2.value;
+	cardWinner.innerText = name2.value;
 }
