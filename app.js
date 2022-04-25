@@ -4,15 +4,6 @@ let updateButton = document.querySelector('.update-button');
 let rangeStart = document.querySelector('.range-start');
 let rangeEnd = document.querySelector('.range-end');
 let randomNumber = randomNumberGenerator(1, 100);
-let allInputFields = document.querySelectorAll('input');
-
-
-
-console.log(randomNumber);
-
-allInputFields.forEach(function(inputElement) {
-    inputElement.addEventListener("keyup", clearDisable);
-});
 
 function defaultRange(){
 	parseInt(minRange.value) = 1;
